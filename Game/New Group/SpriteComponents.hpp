@@ -1,0 +1,34 @@
+#ifndef SpriteComponents_hpp
+#define SpriteComponents_hpp
+#include "Components.hpp"
+#include "SDL2/SDL.hpp"
+
+class SpriteComponent : public Component{
+private:
+    PositionComponent *position;
+    SDL_Texture *texture;
+    SDL_Rect srcRect, destRect;
+    
+public:
+    SpriteComponent() = default;
+    SpriteComponent(const char* path){
+        texture = TextureManager::LoadTexture(path);
+    }
+    void init() override{
+        
+        position = &entity.getComponent<PositionComponent>();
+        
+        srcrect.x = srcrect.y = 0;
+        srcrect.w = srcrect.h = 32;
+        destRect.w = destRect.h = 64;
+    }
+    void update() override{
+        destrect.x = position->x();
+        destRect.y = position->y();
+    }
+    void draw() override{
+        TextureManager::Draw(texture, srcRect, destRect);
+    }
+};
+ 
+#endif

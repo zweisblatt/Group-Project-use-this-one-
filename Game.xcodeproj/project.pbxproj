@@ -38,6 +38,8 @@
 		C53B7AF2208BE0FD00580E75 /* rocket1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket1.png; sourceTree = "<group>"; };
 		C53B7AF3208BE0FD00580E75 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
 		C53B7AF4208BE0FD00580E75 /* Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky.png; sourceTree = "<group>"; };
+		C540F1EB208BF11800FDA80B /* PositionComponents.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PositionComponents.hpp; sourceTree = "<group>"; };
+		C540F1EC208BF12F00FDA80B /* SpriteComponents.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpriteComponents.hpp; sourceTree = "<group>"; };
 		C5A8E39E208A5B6300EE1869 /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A8E3A1208A5B6300EE1869 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C5A8E3AB208A610500EE1869 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -61,6 +63,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C540F1EA208BF0A700FDA80B /* ECS */ = {
+			isa = PBXGroup;
+			children = (
+				C50FE2EF208BD4D300816307 /* ECS.hpp */,
+				C50FE2F0208BD4ED00816307 /* Components.hpp */,
+				C540F1EB208BF11800FDA80B /* PositionComponents.hpp */,
+				C540F1EC208BF12F00FDA80B /* SpriteComponents.hpp */,
+			);
+			name = ECS;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C5A8E395208A5B6200EE1869 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +96,7 @@
 		C5A8E3A0208A5B6300EE1869 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				C540F1EA208BF0A700FDA80B /* ECS */,
 				C5A8E3A1208A5B6300EE1869 /* main.cpp */,
 				C5A8E3AB208A610500EE1869 /* Game.cpp */,
 				C5A8E3AC208A610500EE1869 /* Game.hpp */,
@@ -91,8 +106,6 @@
 				C50FE2E8208B979D00816307 /* GameObject.hpp */,
 				C50FE2EA208BAC2300816307 /* Map.cpp */,
 				C50FE2EB208BAC2300816307 /* Map.hpp */,
-				C50FE2EF208BD4D300816307 /* ECS.hpp */,
-				C50FE2F0208BD4ED00816307 /* Components.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";

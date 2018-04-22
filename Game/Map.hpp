@@ -1,3 +1,5 @@
+#ifndef Map_hpp
+#define Map_hpp
 #include <stdio.h>
 
 #include "Game.hpp"
@@ -24,4 +26,5 @@ private:
     
     
 };
+#endif
 

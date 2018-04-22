@@ -1,3 +1,5 @@
+#ifndef GameObject_hpp
+#define GameObject_hpp
 #include "Game.hpp"
 
 class GameObject{
@@ -16,3 +18,5 @@ private:
     SDL_Rect srcRect, destRect;
     
 };
+ 
+#endif

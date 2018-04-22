@@ -1,19 +1,18 @@
 
 #include "Game.hpp"
 #include "TextureManager.hpp"
-#include "GameObject.hpp"
+
 #include "Map.hpp"
+#include "ECS/Components.hpp"
 
-#include "Components.hpp"
-//#include "ECS.hpp"
 
-GameObject* player;
-GameObject* enemy;
+
+
+
 Map* map;
-
-SDL_Renderer* Game::renderer = nullptr;
 Manager manager;
-auto& newPlayer(manager.addEntity());
+SDL_Renderer* Game::renderer = nullptr;
+auto& Player(manager.addEntity());
 
 
 Game::Game(){
@@ -54,7 +53,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     enemy = new GameObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", -100, -100);
     map = new Map();
     
-    newPlayer.addComponent<PositionComponent>();
+    Player.addComponent<PositionComponent>();
+    Player.addComponent<SpriteComponent>(/Users/oliverhodge/Desktop/Game/Assets/rocket1.png);
     
 }
 
@@ -75,10 +75,9 @@ void Game::handleEvents(){
 
 void Game::update(){
     
-    player->update();
-    enemy->update();
+    manager.refresh();
     manager.update();
-    std::cout<<newPlayer.getComponent<PositionComponent>().x()<<","<<newPlayer.getComponent<PositionComponent>().y()<<std::endl;
+
     
 }
 
@@ -86,8 +85,8 @@ void Game::render(){
     
     SDL_RenderClear(renderer);
     map->drawMap();
-    player->render();
-    enemy->render();
+    
+    manager.draw();
     SDL_RenderPresent(renderer);
     
 }
