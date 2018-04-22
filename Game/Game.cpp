@@ -3,6 +3,7 @@
 #include "TextureManager.hpp"
 #include "Map.hpp"
 #include "Components.hpp"
+#include "Vector2D.hpp"
 
 
 
@@ -52,7 +53,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     //enemy = new GameObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", -100, -100);
     map = new Map();
     
-    Player.addComponent<PositionComponent>();
+    Player.addComponent<TransformComponent>();
     Player.addComponent<SpriteComponent>("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png");
     
 }
@@ -69,15 +70,15 @@ void Game::handleEvents(){
         default:
             break;
     }
-    
 }
 
 void Game::update(){
     
     manager.refresh();
     manager.update();
+    Player.getComponent<TransformComponent>().position.Add(Vector2D(5, 0));
     
-    if (Player.getComponent<PositionComponent>().x() > 100){
+    if (Player.getComponent<TransformComponent>().position.x > 100){
         Player.getComponent<SpriteComponent>().setTex("/Users/oliverhodge/Desktop/Game/Assets/rock.png");
     }
 

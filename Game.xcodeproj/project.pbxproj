@@ -10,6 +10,7 @@
 		C50FE2E9208B979D00816307 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C50FE2E7208B979D00816307 /* GameObject.cpp */; };
 		C50FE2EC208BAC2300816307 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C50FE2EA208BAC2300816307 /* Map.cpp */; };
 		C56C679B208C1817002CCA2B /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C56C6799208C1817002CCA2B /* Asteroid.cpp */; };
+		C56C679E208C192B002CCA2B /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C56C679C208C192B002CCA2B /* Vector2D.cpp */; };
 		C5A8E3A2208A5B6300EE1869 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E3A1208A5B6300EE1869 /* main.cpp */; };
 		C5A8E3AD208A610500EE1869 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E3AB208A610500EE1869 /* Game.cpp */; };
 		C5A8E45D208A827B00EE1869 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A8E45C208A827B00EE1869 /* SDL2.framework */; };
@@ -43,6 +44,8 @@
 		C540F1EC208BF12F00FDA80B /* SpriteComponents.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpriteComponents.hpp; sourceTree = "<group>"; };
 		C56C6799208C1817002CCA2B /* Asteroid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Asteroid.cpp; sourceTree = "<group>"; };
 		C56C679A208C1817002CCA2B /* Asteroid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Asteroid.hpp; sourceTree = "<group>"; };
+		C56C679C208C192B002CCA2B /* Vector2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
+		C56C679D208C192B002CCA2B /* Vector2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2D.hpp; sourceTree = "<group>"; };
 		C5A8E39E208A5B6300EE1869 /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A8E3A1208A5B6300EE1869 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C5A8E3AB208A610500EE1869 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 				C50FE2EB208BAC2300816307 /* Map.hpp */,
 				C56C6799208C1817002CCA2B /* Asteroid.cpp */,
 				C56C679A208C1817002CCA2B /* Asteroid.hpp */,
+				C56C679C208C192B002CCA2B /* Vector2D.cpp */,
+				C56C679D208C192B002CCA2B /* Vector2D.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56C679E208C192B002CCA2B /* Vector2D.cpp in Sources */,
 				C50FE2E9208B979D00816307 /* GameObject.cpp in Sources */,
 				C50FE2EC208BAC2300816307 /* Map.cpp in Sources */,
 				C5A8E3A2208A5B6300EE1869 /* main.cpp in Sources */,
