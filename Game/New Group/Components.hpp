@@ -2,7 +2,7 @@
 #define Components_hpp
 
 #include "ECS.hpp"
-#include "PositionComponents.hpp"
+#include "TransformComponents.hpp"
 #include "SpriteComponents.hpp"
 
 #endif
