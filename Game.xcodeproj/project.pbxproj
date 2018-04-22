@@ -66,10 +66,6 @@
 		C540F1EA208BF0A700FDA80B /* ECS */ = {
 			isa = PBXGroup;
 			children = (
-				C50FE2EF208BD4D300816307 /* ECS.hpp */,
-				C50FE2F0208BD4ED00816307 /* Components.hpp */,
-				C540F1EB208BF11800FDA80B /* PositionComponents.hpp */,
-				C540F1EC208BF12F00FDA80B /* SpriteComponents.hpp */,
 			);
 			name = ECS;
 			path = "New Group";
@@ -98,6 +94,10 @@
 			children = (
 				C540F1EA208BF0A700FDA80B /* ECS */,
 				C5A8E3A1208A5B6300EE1869 /* main.cpp */,
+				C50FE2EF208BD4D300816307 /* ECS.hpp */,
+				C50FE2F0208BD4ED00816307 /* Components.hpp */,
+				C540F1EB208BF11800FDA80B /* PositionComponents.hpp */,
+				C540F1EC208BF12F00FDA80B /* SpriteComponents.hpp */,
 				C5A8E3AB208A610500EE1869 /* Game.cpp */,
 				C5A8E3AC208A610500EE1869 /* Game.hpp */,
 				C5CCE51A208AAAD200D2AC66 /* TextureManager.cpp */,

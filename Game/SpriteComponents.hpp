@@ -1,7 +1,7 @@
 #ifndef SpriteComponents_hpp
 #define SpriteComponents_hpp
 #include "Components.hpp"
-#include "SDL2/SDL.hpp"
+#include "SDL2/SDL.h"
 
 class SpriteComponent : public Component{
 private:
@@ -12,22 +12,27 @@ private:
 public:
     SpriteComponent() = default;
     SpriteComponent(const char* path){
+        setTex(path);
+    }
+    
+    void setTex(const char* path){
         texture = TextureManager::LoadTexture(path);
     }
+    
     void init() override{
         
-        position = &entity.getComponent<PositionComponent>();
+        position = &entity->getComponent<PositionComponent>();
         
-        srcrect.x = srcrect.y = 0;
-        srcrect.w = srcrect.h = 32;
-        destRect.w = destRect.h = 64;
+        srcRect.x = srcRect.y = 0;
+        srcRect.w = srcRect.h = 570;
+        destRect.w = destRect.h = 95;
     }
     void update() override{
-        destrect.x = position->x();
+        destRect.x = position->x();
         destRect.y = position->y();
     }
     void draw() override{
-        TextureManager::Draw(texture, srcRect, destRect);
+        TextureManager::draw(texture, srcRect, destRect);
     }
 };
  

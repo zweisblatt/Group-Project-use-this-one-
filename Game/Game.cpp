@@ -1,9 +1,8 @@
 
 #include "Game.hpp"
 #include "TextureManager.hpp"
-
 #include "Map.hpp"
-#include "ECS/Components.hpp"
+#include "Components.hpp"
 
 
 
@@ -49,12 +48,12 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         isRunning=false;
     }
     
-    player = new GameObject("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png",0,0);
-    enemy = new GameObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", -100, -100);
+    //Player = new GameObject("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png",0,0);
+    //enemy = new GameObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", -100, -100);
     map = new Map();
     
     Player.addComponent<PositionComponent>();
-    Player.addComponent<SpriteComponent>(/Users/oliverhodge/Desktop/Game/Assets/rocket1.png);
+    Player.addComponent<SpriteComponent>("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png");
     
 }
 
@@ -77,6 +76,10 @@ void Game::update(){
     
     manager.refresh();
     manager.update();
+    
+    if (Player.getComponent<PositionComponent>().x() > 100){
+        Player.getComponent<SpriteComponent>().setTex("/Users/oliverhodge/Desktop/Game/Assets/rock.png");
+    }
 
     
 }

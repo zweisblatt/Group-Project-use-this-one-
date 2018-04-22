@@ -1,5 +1,5 @@
 #ifndef ECS_hpp
-#deine ECS_hpp
+#define ECS_hpp
 #include <iostream>
 #include <vector>
 #include <memory>
